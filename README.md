@@ -30,3 +30,35 @@ This project demonstrates how to build, containerize, and run a production-ready
 
 ## 🧰 Project Structure
 
+golang-crud-rest-api/
+├── controllers/ # HTTP handlers (CRUD logic)
+├── database/ # DB connection and migration
+├── config.go # Loads app configuration
+├── main.go # Entry point
+├── config.json # App configuration (port, DB string)
+├── Dockerfile # Multi-stage Docker build
+├── docker-compose.yml # Compose for app + MySQL
+└── go.mod / go.sum # Dependencies
+
+
+---
+
+## ⚙️ Configuration
+
+### `config.json`
+```json
+{
+  "connection_string": "root:password@tcp(mysql:3306)/crud_demo",
+  "port": 8080
+}
+
+## 🐳 Running with Docker Compose
+1️⃣ Build and start containers
+docker compose up --build
+
+
+Use Postman or curl:
+
+Get all products
+GET http://localhost:8080/api/products
+
