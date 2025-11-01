@@ -1,21 +1,32 @@
-# Implementing CRUD in GoLang REST API with Mux & GORM
+# 🚀 Go CRUD API (Dockerized with MySQL)
 
-![CRUD in GoLang REST API with Mux & GORM](https://codewithmukesh.com/wp-content/uploads/2022/03/CRUD-in-Golang-REST-API-with-Mux-GORM-Simple-Guide.png)
+A simple **Golang CRUD REST API** connected to **MySQL**, fully containerized using **Docker** and **Docker Compose**.  
+This project demonstrates how to build, containerize, and run a production-ready Go REST API in a few simple steps.
 
-In this article, we will learn about implementing CRUD in Golang REST API with Gorilla Mux for routing requests, GORM as the ORM to access the database, Viper for Loading configurations, and MySQL as the database provider. We will also follow some clean development practices to help organize the GoLang project folder structure in a more easy-to-understand fashion.
+---
 
-## Topics Covered
-- Setting up the Golang Project
-- Loading Configurations using Viper
-- Defining the Product Entity
-- Connecting to the database
-- Routing
-- Implementing CRUD in Golang Rest API
-	 - Create
-	 - Get By ID
-	 - Get All
-	 - Update
-	 - Delete
-- Testing CRUD Operations
+## 🧩 Features
 
-Read the entire article here - https://codewithmukesh.com/blog/implementing-crud-in-golang-rest-api/
+- 🐹 Go (Golang) REST API using `net/http` and `gorilla/mux`
+- 🗄️ MySQL integration using `gorm`
+- ⚙️ Configuration management with `viper`
+- 🐳 Fully Dockerized (multi-stage build)
+- 🔄 Docker Compose setup for API + Database
+- 📦 Automatic database migration
+
+---
+
+## 🧠 Tech Stack
+
+| Component | Description |
+|------------|--------------|
+| **Language** | Go (Golang) |
+| **Frameworks** | Gorilla Mux, GORM |
+| **Database** | MySQL 8 |
+| **Config Management** | Viper |
+| **Containerization** | Docker & Docker Compose |
+
+---
+
+## 🧰 Project Structure
+
