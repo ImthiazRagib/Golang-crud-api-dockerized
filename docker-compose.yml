@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  go_app:
+    build: .
+    container_name: go_app
+    ports:
+      - 8080:8080
+    environment:
+      ENV: development
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_DB: crud_demo
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: crud_demo
+    volumes: 
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_data:
